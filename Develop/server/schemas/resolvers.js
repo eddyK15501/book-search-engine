@@ -23,28 +23,41 @@ const resolvers = {
 
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
-        const user = await User.create({ username, email, password });
-        const token = signToken(user);
-        return { token, user };
+      const user = await User.create({ username, email, password });
+      const token = signToken(user);
+      return { token, user };
     },
     login: async (parent, { email, password }) => {
-        const user = await User.findOne({ email });
+      const user = await User.findOne({ email });
 
-        if (!user) {
-            throw AuthenticationError;
-        }
+      if (!user) {
+        throw AuthenticationError;
+      }
 
-        const correctPw = await user.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
-        if (!correctPw) {
-            throw AuthenticationError;
-        }
+      if (!correctPw) {
+        throw AuthenticationError;
+      }
 
-        const token = signToken(user);
+      const token = signToken(user);
 
-        return { token, user };
-    }
-  }
+      return { token, user };
+    },
+    saveBook: async (parent, { bookSaved }, context) => {
+      if (context.user) {
+        const updateUserBooks = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { savedBooks: bookSaved } },
+          { new: true, runValidators: true }
+        ).populate('savedBooks');
+
+        return updateUserBooks;
+      }
+
+      throw AuthenticationError;
+    },
+  },
 };
 
 module.exports = resolvers;
