@@ -1,3 +1,4 @@
+import { ApolloError } from '@apollo/server';
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
@@ -6,6 +7,11 @@ const secret = process.env.SECRET;
 const expiration = process.env.EXPIRATION;
 
 module.exports = {
+  AuthenticationError: new ApolloError('User not authenticated.', {
+    extensions: {
+      code: 'UNAUTHENTICATED',
+    }
+  }),
   // function for our authenticated routes
   authMiddleware: function (req, res, next) {
     // allows token to be sent via  req.query or headers
