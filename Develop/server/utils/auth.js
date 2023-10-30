@@ -7,7 +7,7 @@ const secret = process.env.SECRET;
 const expiration = process.env.EXPIRATION;
 
 module.exports = {
-  AuthenticationError: new ApolloError('User not authenticated.', {
+  AuthenticationError: new ApolloError('Could not authenticate user.', {
     extensions: {
       code: 'UNAUTHENTICATED',
     }
