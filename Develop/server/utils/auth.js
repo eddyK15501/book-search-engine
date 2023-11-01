@@ -1,4 +1,4 @@
-import { ApolloError } from '@apollo/server';
+const { ApolloError } = require('@apollo/server');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
