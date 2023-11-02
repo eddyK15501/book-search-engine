@@ -17,9 +17,9 @@ const SavedBooks = () => {
 
   const [deleteBook, _] = useMutation(REMOVE_BOOK, {
     refetchQueries: [
-      GET_ME,
-      'me',
-    ]
+      { query: GET_ME }
+    ],
+    awaitRefetchQueries: true,
   });
 
   const userData = data?.me || {};
@@ -41,8 +41,6 @@ const SavedBooks = () => {
       await deleteBook({
         variables: { bookId },
       });
-
-      // console.log(data);
 
       // upon success, remove book's id from localStorage
       removeBookId(bookId);

@@ -20,9 +20,9 @@ const SearchBooks = () => {
 
   const [saveBook, _] = useMutation(SAVE_BOOK, {
     refetchQueries: [
-      GET_ME,
-      'me'
-    ]
+      { query: GET_ME }
+    ],
+    awaitRefetchQueries: true,
   });
 
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
