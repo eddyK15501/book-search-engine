@@ -12,7 +12,7 @@ Search for books and save them for future reference! This is a MERN stack web ap
 
 <img src="https://user-images.githubusercontent.com/88423414/280179313-92f92e2c-860a-4e31-a89f-d3b91cbd6712.png" />
 
-<img width="750px" src="https://user-images.githubusercontent.com/88423414/280179332-36bb4998-5e5f-4e8b-92a6-8f2dc9209c79.png" />
+<img src="https://user-images.githubusercontent.com/88423414/280179332-36bb4998-5e5f-4e8b-92a6-8f2dc9209c79.png" />
 
 * #### Sign up and create a new user to bookmark the searched book for later. 
 
