@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-Search for books and save them for future reference! This is a MERN stack web application leveraging the Google Books API search engine, using conventional RESTful routes. Transformed and refactored into a GraphQL API. Apollo Client/Server employed for precise data retrieval and optimized performance. GraphQL type definitions created to define the schema for queries and mutations. Resolvers implemented to handle the functionality. JWT tokens employed for securing the authentication of users. MongoDB Atlas Cluster set up as a cloud-based database infrastructure. Connected and integrated with Heroku for deployment.
+Search for books and save them for future reference! This is a MERN stack web application leveraging the Google Books API search engine, using conventional RESTful routes. Transformed and refactored into a GraphQL API. Apollo Client/Server dispatched for precise data retrieval and optimized performance. GraphQL type definitions created to define the schema for queries and mutations. Resolvers implemented to handle the functionality. JWT tokens employed for securing the authentication of users. MongoDB Atlas Cluster set up as a cloud-based database infrastructure. Connected and integrated with Heroku for deployment.
 
 ## Link to the Deployed Application
 * [Click Here](https://eddyk15501-book-search-7acba26d9652.herokuapp.com/)
