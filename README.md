@@ -5,6 +5,8 @@
 Search for books and save them for future reference! This is a MERN stack web application leveraging the Google Books API search engine, using conventional RESTful routes. Transformed and refactored into a GraphQL API. Apollo Client/Server dispatched for precise data retrieval and optimized performance. GraphQL type definitions created to define the schema for queries and mutations. Resolvers implemented to handle the functionality. JWT tokens employed for securing the authentication of users. MongoDB Atlas Cluster set up as a cloud-based database infrastructure. Connected and integrated with Heroku for deployment.
 
 ## Link to the Deployed Application
+#### Update: The Heroku application has been deactivated due to accumulating dyno fees, that exceed the limits provided by the Github Student Developer Pack.
+
 * [Click Here](https://eddyk15501-book-search-7acba26d9652.herokuapp.com/)
 
 ## Usage
